@@ -20,7 +20,6 @@ pipeline {
                     node --version
                     npm --version
                     npm ci
-                    echo "npx playwright --version"
                     npm run build
                     ls -la
                 '''
@@ -54,7 +53,7 @@ pipeline {
                 stage('E2E') {
                     agent {
                         docker {
-                            image 'mcr.microsoft.com/playwright:v1.49.1-noble'
+                            image 'mcr.microsoft.com/playwright:v1.49.1-jammy'
                             reuseNode true
                         }
                     }
