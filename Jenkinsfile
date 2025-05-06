@@ -20,7 +20,7 @@ pipeline {
                     node --version
                     npm --version
                     npm ci
-                    npx playwright --version
+                    echo "npx playwright --version"
                     npm run build
                     ls -la
                 '''
